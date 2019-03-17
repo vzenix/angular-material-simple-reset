@@ -40,9 +40,9 @@ export class GeneralRestComponent implements OnChanges, OnDestroy {
   }
 
   public ngOnChanges() {
-    this.fUrl = this.url;
-    this.fMethod = this.method.toUpperCase();
-    this.fContent = JSON.stringify(this.content);
+    this.fUrl = typeof this.url === 'string' ? this.url : '';
+    this.fMethod = typeof this.method === 'string' ? this.method.toUpperCase() : '';
+    this.fContent = typeof this.content === 'string' ? this.content : JSON.stringify(this.content);
   }
 
   public save() {
