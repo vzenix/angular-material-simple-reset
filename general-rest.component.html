@@ -1,0 +1,35 @@
+<form>
+
+  <div style="display: flex; width: 100%;">
+    <mat-form-field style="min-width: 100px;">
+      <mat-select placeholder="Método" [(ngModel)]="fMethod" name="fMethod">
+        <mat-option *ngFor="let m of methods" [value]="m">
+          {{m}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <span style="width: 40px;"></span>
+    <mat-form-field style="flex: 1;">
+      <input matInput placeholder="URL" name="fUrl" [(ngModel)]="fUrl" />
+    </mat-form-field>
+  </div>
+
+  <div style="display: flex; width: 100%;" *ngIf="fMethod === 'POST' || fMethod === 'PUT'">
+    <mat-form-field style="flex: 1;">
+      <textarea matInput placeholder="Enviado" rows="10" name="fContent" [(ngModel)]="fContent"></textarea>
+    </mat-form-field>
+  </div>
+
+  <h2>{{fOutputType}} {{fOutputDate}}</h2>
+  <div>
+    <pre style="flex: 1;">{{fOutput|json}}</pre>
+  </div>
+
+  <div style="display: flex;">
+    <span style="flex: 1;"></span>
+    <button mat-raised-button color="primary" type="button" (click)="save()" [disabled]="isSending">
+      Listo
+    </button>
+  </div>
+
+</form>
