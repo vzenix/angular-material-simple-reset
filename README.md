@@ -34,7 +34,7 @@ export class AppModule { }
 
 # Sample of use
 
-## Component where use it
+## Component where used
 
 ```
 import { Component } from '@angular/core';
