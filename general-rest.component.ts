@@ -51,7 +51,7 @@ export class GeneralRestComponent implements OnChanges, OnDestroy {
     if (this.sub) { this.sub.unsubscribe(); }
 
     let rest = null;
-    switch (this.method) {
+    switch (this.fMethod) {
       case 'GET': rest = this.rest.get(this.fUrl); break;
       case 'POST': rest = this.rest.post(this.fUrl, this.fContent); break;
       case 'PUT': rest = this.rest.put(this.fUrl, this.fContent); break;
