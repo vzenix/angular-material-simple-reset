@@ -4,7 +4,7 @@ Simple reset component for develop bodies of application.
 
 # Sample import
 
-[code]
+```
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -30,11 +30,11 @@ import { GeneralRestModule } from './general-rest/general-rest.module';
 })
 export class AppModule { }
 
-[/code]
+```
 
 # Sample of use
 
-[code]
+```
 
 <h1>GET</h1>
 <div style="max-width: calc(100vw - 100px); padding: 50px;">
@@ -63,4 +63,4 @@ export class AppModule { }
   </mat-card>
 </div>
 
-[/code]
+```
