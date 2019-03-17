@@ -13,8 +13,8 @@ export class GeneralRestComponent implements OnChanges, OnDestroy {
   @Input() url: string;
   @Input() content: any;
 
-  @Output() out = new EventEmitter<any>();
-  @Output() err = new EventEmitter<any>();
+  @Output() out = new EventEmitter<GeneralRestResponse>();
+  @Output() err = new EventEmitter<GeneralRestResponse>();
 
   private sub;
 
