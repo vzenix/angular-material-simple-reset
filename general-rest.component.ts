@@ -53,9 +53,9 @@ export class GeneralRestComponent implements OnChanges, OnDestroy {
     let rest = null;
     switch (this.method) {
       case 'GET': rest = this.rest.get(this.fUrl); break;
-      case 'POST': rest = this.rest.get(this.fUrl); break;
-      case 'PUT': rest = this.rest.get(this.fUrl); break;
-      case 'DELETE': rest = this.rest.get(this.fUrl); break;
+      case 'POST': rest = this.rest.post(this.fUrl, this.fContent); break;
+      case 'PUT': rest = this.rest.put(this.fUrl, this.fContent); break;
+      case 'DELETE': rest = this.rest.delete(this.fUrl); break;
       default:
         return false;
     }
