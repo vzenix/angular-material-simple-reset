@@ -36,6 +36,7 @@ export class AppModule { }
 
 ## Component where use it
 
+```
 import { Component } from '@angular/core';
 
 @Component({
@@ -50,7 +51,7 @@ export class AppComponent {
     num: 5
   };
 }
-
+```
 
 ## Template
 
