@@ -50,6 +50,9 @@ export class AppComponent {
     es: true,
     num: 5
   };
+  
+  public error($event) { console.log($event); }
+  public response($event) { console.log($event); }
 }
 ```
 
@@ -61,7 +64,7 @@ export class AppComponent {
 <div style="max-width: calc(100vw - 100px); padding: 50px;">
   <mat-card style="margin: auto;">
     <mat-card-content>
-      <general-rest method="GET" url="https://es.gravatar.com/205e460b479e2e5b48aec07710c08d50.json"></general-rest>
+      <general-rest method="GET" url="https://es.gravatar.com/205e460b479e2e5b48aec07710c08d50.json" (out)="response($event)" (err)="error($event)"></general-rest>
     </mat-card-content>
   </mat-card>
 </div>
