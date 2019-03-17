@@ -34,6 +34,26 @@ export class AppModule { }
 
 # Sample of use
 
+## Component where use it
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+  public content = {
+    algo: 'vale',
+    es: true,
+    num: 5
+  };
+}
+
+
+## Template
+
 ```
 
 <h1>GET</h1>
