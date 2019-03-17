@@ -1,6 +1,6 @@
 # angular-material-simple-reset
 
-Simple reset component for develop bodies of application.
+Simple reset component for develop bodies of applications.
 
 # Sample import
 
