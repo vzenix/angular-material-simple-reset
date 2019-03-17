@@ -61,7 +61,7 @@ export class GeneralRestComponent implements OnChanges, OnDestroy {
     }
 
     this.isSending = true;
-    rest.subscribe(
+    this.sub = rest.subscribe(
       (r) => {
         this.isSending = false;
         this.fOutputType = 'Ok';
