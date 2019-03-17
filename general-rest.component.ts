@@ -67,15 +67,21 @@ export class GeneralRestComponent implements OnChanges, OnDestroy {
         this.fOutputType = 'Ok';
         this.fOutput = r;
         this.fOutputDate = new Date();
-        this.out.emit({type: 'ok', out: r});
+        this.out.emit({ type: 'ok', out: r, date: this.fOutputDate } as GeneralRestResponse);
       }, (e) => {
         this.isSending = false;
         this.fOutputType = 'Error';
         this.fOutput = e;
         this.fOutputDate = new Date();
-        this.out.emit({type: 'error', out: e});
+        this.err.emit({ type: 'error', out: e, date: this.fOutputDate } as GeneralRestResponse);
       }
     );
   }
 
+}
+
+class GeneralRestResponse {
+  type: string;
+  out: any;
+  date: Date;
 }
