@@ -64,14 +64,16 @@ export class GeneralRestComponent implements OnChanges, OnDestroy {
     rest.subscribe(
       (r) => {
         this.isSending = false;
-        this.fOutputType = 'Correcto';
+        this.fOutputType = 'Ok';
         this.fOutput = r;
         this.fOutputDate = new Date();
+        this.out.emit({type: 'ok', out: r});
       }, (e) => {
         this.isSending = false;
         this.fOutputType = 'Error';
         this.fOutput = e;
         this.fOutputDate = new Date();
+        this.out.emit({type: 'error', out: e});
       }
     );
   }
